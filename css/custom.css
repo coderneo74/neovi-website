@@ -1,0 +1,45 @@
+/* Site overrides: navbar button pills. Keep this file lightweight and loaded after style.css */
+#ftco-navbar .navbar-nav > .nav-item > .nav-link {
+  display: inline-block !important;
+  background-color: #18b7c0 !important;
+  border: 1px solid #18b7c0 !important;
+  border-radius: 6px !important;
+  padding: 0.7rem 1.1rem !important;
+  margin: 0 0.25rem !important;
+  line-height: 1.2 !important;
+  color: #fff !important;
+}
+#ftco-navbar .navbar-nav > .nav-item > .nav-link:hover,
+#ftco-navbar .navbar-nav > .nav-item > .nav-link:focus {
+  background-color: #18b7c0 !important;
+  border-color: #18b7c0 !important;
+  color: #fff !important;
+}
+#ftco-navbar .navbar-nav > .nav-item.active > .nav-link {
+  background-color: #F19738 !important;
+  border-color: #F19738 !important;
+  color: #fff !important;
+}
+#ftco-navbar .navbar-nav > .nav-item.active > .nav-link:hover,
+#ftco-navbar .navbar-nav > .nav-item.active > .nav-link:focus {
+  background-color: #d9842e !important;
+  border-color: #d9842e !important;
+  color: #fff !important;
+}
+/* Ensure left padding for the first link */
+#ftco-navbar .navbar-nav > .nav-item > .nav-link.pl-0 { padding-left: 1.1rem !important; }
+/* Preserve pills on scrolled state */
+#ftco-navbar.ftco-navbar-light.scrolled .navbar-nav > .nav-item > .nav-link {
+  display: inline-block !important;
+  background-color: #18b7c0 !important;
+  border: 1px solid #18b7c0 !important;
+  border-radius: 6px !important;
+  padding: 0.7rem 1.1rem !important;
+  margin: 0 0.25rem !important;
+  color: #fff !important;
+}
+#ftco-navbar.ftco-navbar-light.scrolled .navbar-nav > .nav-item.active > .nav-link {
+  background-color: #F19738 !important;
+  border-color: #F19738 !important;
+  color: #fff !important;
+}
