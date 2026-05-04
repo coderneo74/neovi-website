@@ -38,7 +38,7 @@
 					    </div>
 					    <div class="col-md pr-4 d-flex topper align-items-center">
 					    	<div class="icon bg-secondary mr-2 d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
-						    <a href="mailto:neovi@gmail.com"><span class="text">talk2viksha@neovi.com.my</span></a>
+						    <a href="mailto:talk2viksha@neovi.com.my"><span class="text">talk2viksha@neovi.com.my</span></a>
 					    </div>
 					    <div class="col-md pr-4 d-flex topper align-items-center">
 					    	<div class="icon bg-tertiary mr-2 d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
@@ -364,7 +364,7 @@
 		              <textarea name="message" id="" cols="30" rows="2" class="form-control" placeholder="Message" required></textarea>
 		            </div>
 		            <div class="form-group ml-md-4">
-		              <div class="g-recaptcha" data-sitekey="YOUR_RECAPTCHA_SITE_KEY"></div>
+		              <div class="g-recaptcha" data-sitekey="6LecBdksAAAAAGSgyrqgvoIyTpyYD-mJ-RBT0nSv"></div>
 		            </div>
 		            <div class="form-group ml-md-4">
 		              <input type="submit" value="Submit Message" class="btn btn-secondary py-3 px-4">
@@ -452,9 +452,9 @@
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script>
       document.addEventListener('DOMContentLoaded', function () {
-        const PUBLIC_KEY = '6LecBdksAAAAAGSgyrqgvoIyTpyYD-mJ-RBT0nSv';
-        const SERVICE_ID = '6LecBdksAAAAAPby9p_ECwClwuaLpwfGwS97nsqL';       // e.g., 'service_xxxxx'
-        const TEMPLATE_ID = 'YOUR_TEMPLATE_ID';     // e.g., 'template_xxxxx'
+        const PUBLIC_KEY = 'YOUR_PUBLIC_KEY';
+        const SERVICE_ID = 'service_neovi';       // e.g., 'service_xxxxx'
+        const TEMPLATE_ID = 'template_neovi';     // e.g., 'template_xxxxx'
         try { emailjs.init(PUBLIC_KEY); } catch (e) { console.warn('EmailJS init failed:', e); }
 
         const form = document.getElementById('contact-form');
