@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css?v=4">
     <link rel="stylesheet" href="css/custom.css?v=1">
-
+    
     
   </head>
   <body>
@@ -447,6 +447,7 @@
 
     <!-- Google reCAPTCHA v2 -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+	  
 	<script>
 	  const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzyOHBXVbT7HdnwX_33UMplFKlKRfk66WNiCi0OgqDue9KCMvcryOXCcczkzOWoKxg1Og/exec";
 	
@@ -465,15 +466,12 @@
 	      if (statusEl) statusEl.textContent = "Sending...";
 	
 	      try {
-	        let recaptchaToken = "";
+	        const recaptchaToken = grecaptcha.getResponse();
 	
-	        if (window.grecaptcha) {
-	          recaptchaToken = grecaptcha.getResponse();
-	
-	          if (!recaptchaToken) {
-	            if (statusEl) statusEl.textContent = "Please verify you are human.";
-	            return;
-	          }
+	        if (!recaptchaToken) {
+	          if (statusEl) statusEl.textContent = "Please verify you are human.";
+	          if (submitBtn) submitBtn.disabled = false;
+	          return;
 	        }
 	
 	        const formData = new FormData();
@@ -495,10 +493,7 @@
 	        }
 	
 	        form.reset();
-	
-	        if (window.grecaptcha) {
-	          grecaptcha.reset();
-	        }
+	        grecaptcha.reset();
 	
 	      } catch (error) {
 	        if (statusEl) {
@@ -514,9 +509,8 @@
 	    });
 	  });
 	</script>
-
-
-    <script>
+	  
+	<script>
 		document.addEventListener('DOMContentLoaded', function () {
 			var nav = document.getElementById('ftco-nav');
 			if (!nav) return;
@@ -531,6 +525,6 @@
 				});
 			});
 		});
-	</script>
+	</script> 
   </body> 
 </html>
